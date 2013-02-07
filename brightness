@@ -9,8 +9,8 @@
 #
 
 if  [ -e /etc/last_brightness ] ; then
-	mv /etc/last_brightness /sys/class/backlight/acpi_video0/brightness
+        cat /etc/last_brightness > /sys/class/backlight/acpi_video0/brightness
 else
-	echo "called" > /etc/last_brightness_read_failed
+        echo "called" > /etc/last_brightness_read_failed
 fi
 
