@@ -1,0 +1,7 @@
+# list all jobs (stopped and running instances), and compact down
+# to actual job names.
+initctl list | awk '{print $1}' | sort -u | while read job
+do
+  # identify jobs with no "stop on"
+  initctl show-config -e $job | grep -q "^  stop on" || echo "$job"
+done
