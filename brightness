@@ -2,7 +2,7 @@
 #
 # rc
 #
-# read/write brightness parameter on runlevel changea
+# read brightness parameter after reboot
 #
 # Authors:
 #   Taihsiang Ho 

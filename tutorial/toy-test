@@ -1,0 +1,3 @@
+#!/bin/sh
+
+echo "toy-test is called" > /etc/toy-test.tmp
