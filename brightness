@@ -1,0 +1,16 @@
+#! /bin/sh
+#
+# rc
+#
+# read/write brightness parameter on runlevel changea
+#
+# Authors:
+#   Taihsiang Ho 
+#
+
+if  [ -e /etc/last_brightness ] ; then
+	mv /etc/last_brightness /sys/class/backlight/acpi_video0/brightness
+else
+	echo "called" > /etc/last_brightness_read_failed
+fi
+
